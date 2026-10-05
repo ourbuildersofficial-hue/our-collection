@@ -6,10 +6,9 @@ import type { HomeProduct } from '@/lib/products';
 // cookies needed since these are all public reads, and this needs to work
 // outside a request context (revalidated ISR renders, sitemap builds).
 function createStatelessClient() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-anon-key';
+  return createClient(url, key);
 }
 
 export async function fetchProductDetailServer(slugOrId: string): Promise<ProductDetail | null> {

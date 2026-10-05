@@ -7,7 +7,7 @@ import { WishlistProvider } from '@/lib/wishlist';
 import '../globals.css';
 
 const STORE_NAME = process.env.NEXT_PUBLIC_STORE_NAME || 'Our Collection';
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://newourcollection.com';
 
 // Sets a base for resolving any relative image path (e.g. og:image, favicon)
 // into an absolute URL — without this, Next.js can't turn "/our_collection_icon.png"
