@@ -67,7 +67,7 @@ export default function FooterNav() {
             {/* Social icons */}
             <div className="flex gap-3">
               {/* Facebook */}
-              <a href="https://www.facebook.com/ourcollectionbd" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F2EDE3]/70 hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all duration-200">
+              <a href="https://www.facebook.com/myourcollection" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#F2EDE3]/70 hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all duration-200">
                 <svg className="h-3.5 w-3.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
               </a>
               {/* Instagram */}

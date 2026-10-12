@@ -61,12 +61,12 @@ export default function ContactPage() {
       title: isBn ? 'ঠিকানা' : 'Address',
       value: isBn ? 'ঢাকা, বাংলাদেশ' : 'Dhaka, Bangladesh',
       href: undefined,
-      color: 'text-[#C6A15B] bg-[#C6A15B]/10'
+      color: 'text-brand-primary bg-brand-primary/10'
     }
   ];
 
   const social = [
-    { icon: FacebookIcon, href: 'https://www.facebook.com/ourcollectionbd', label: 'Facebook' },
+    { icon: FacebookIcon, href: 'https://www.facebook.com/myourcollection', label: 'Facebook' },
     { icon: InstagramIcon, href: 'https://www.instagram.com/ourcollectionbd', label: 'Instagram' },
     { icon: WhatsAppIcon, href: 'https://wa.me/8801788825495', label: 'WhatsApp' }
   ];
