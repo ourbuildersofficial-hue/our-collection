@@ -28,14 +28,12 @@ function AdminLoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-primary flex items-center justify-center p-4 font-sans">
-      <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl p-8 space-y-6 text-center">
-        <div className="h-14 w-14 rounded-full bg-brand-primary/8 flex items-center justify-center text-brand-primary mx-auto">
-          <ShieldCheck className="h-6 w-6" strokeWidth={1.5} />
-        </div>
-        <div className="space-y-1.5">
-          <h1 className="text-xl font-black text-brand-text">অ্যাডমিন প্যানেল</h1>
-          <p className="text-xs text-brand-muted font-semibold">
+    <div className="min-h-screen bg-[#101013] flex items-center justify-center p-4 font-sans">
+      <div className="w-full max-w-sm bg-white rounded-3xl shadow-2xl p-8 space-y-6 text-center border border-white/10">
+        <div className="space-y-3">
+          <img src="/our_collection_logo.svg" alt="Our Collection" className="h-10 mx-auto object-contain" />
+          <h1 className="text-sm font-bold uppercase tracking-wider text-brand-muted">অ্যাডমিন প্যানেল</h1>
+          <p className="text-xs text-brand-muted/80 font-medium">
             স্টোর পরিচালনা করতে অনুমোদিত গুগল অ্যাকাউন্ট দিয়ে সাইন ইন করুন।
           </p>
         </div>

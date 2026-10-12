@@ -63,7 +63,7 @@ function HeroSlider({ locale }: { locale: string }) {
             className="h-1 rounded-full transition-all duration-300"
             style={{
               width: active === i ? 22 : 6,
-              background: active === i ? '#E6027C' : 'rgba(255,255,255,0.6)',
+              background: active === i ? '#ED1F6A' : 'rgba(255,255,255,0.6)',
             }}
           />
         ))}
@@ -98,7 +98,7 @@ function FlashCountdown({ locale }: { locale: string }) {
       {units.map((u, i) => (
         <div key={i} className="flex items-center gap-1">
           <div className="flex flex-col items-center min-w-[30px]">
-            <span className="text-xs font-bold text-brand-secondary font-mono leading-none tabular-nums">{u.value}</span>
+            <span className="text-xs font-bold text-brand-primary font-mono leading-none tabular-nums">{u.value}</span>
             <span className="text-[6.5px] font-semibold text-brand-muted uppercase tracking-wider mt-0.5">
               {locale === 'bn' ? u.label_bn : u.label_en}
             </span>
@@ -133,7 +133,7 @@ export default function HomePageClient({ initialProducts }: { initialProducts: H
           <h2 className="font-serif text-base sm:text-lg font-semibold text-brand-text tracking-tight">
             {locale === 'bn' ? 'ক্যাটাগরি অনুযায়ী শপ করুন' : 'Shop by Category'}
           </h2>
-          <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-secondary transition-colors uppercase tracking-wide">
+          <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-primary-alt transition-colors uppercase tracking-wide">
             {locale === 'bn' ? 'সব দেখুন' : 'View all'}
           </Link>
         </div>
@@ -144,7 +144,7 @@ export default function HomePageClient({ initialProducts }: { initialProducts: H
             const Icon = cat.icon;
             return (
               <Link key={i} href={`/shop`}
-                className="flex-shrink-0 flex flex-col items-center gap-2 p-3.5 bg-white rounded-xl border border-brand-border hover:border-[#C6A15B]/40 hover:shadow-sm transition-all duration-200 w-[100px] sm:w-auto"
+                className="flex-shrink-0 flex flex-col items-center gap-2 p-3.5 bg-white rounded-xl border border-brand-border hover:border-brand-primary/40 hover:shadow-sm transition-all duration-200 w-[100px] sm:w-auto"
               >
                 {/* Rounded Icon tint background */}
                 <div className={`h-11 w-11 rounded-full flex items-center justify-center ${cat.bg} border border-brand-border`}>
@@ -165,13 +165,13 @@ export default function HomePageClient({ initialProducts }: { initialProducts: H
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
           <h2 className="font-serif text-base sm:text-lg font-semibold text-brand-text tracking-tight flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-[#C6A15B]" strokeWidth={1.75} />
+            <Sparkles className="h-4 w-4 text-brand-primary" strokeWidth={1.75} />
             <span>{locale === 'bn' ? 'ফ্ল্যাশ ডিলস' : 'Flash Deals'}</span>
           </h2>
 
           <div className="flex items-center gap-3">
             <FlashCountdown locale={locale} />
-            <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-secondary transition-colors uppercase tracking-wide">
+            <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-primary-alt transition-colors uppercase tracking-wide">
               {locale === 'bn' ? 'সব দেখুন' : 'View all'}
             </Link>
           </div>
@@ -206,14 +206,14 @@ export default function HomePageClient({ initialProducts }: { initialProducts: H
         {/* Right card Promo */}
         <div className="relative rounded-xl p-6 overflow-hidden bg-brand-surface text-brand-text flex flex-col justify-between min-h-[120px] border border-brand-border">
           <div className="absolute right-4 bottom-2 opacity-[0.08]">
-            <Gift className="h-20 w-20 text-[#C6A15B]" />
+            <Gift className="h-20 w-20 text-brand-primary" />
           </div>
           <div className="space-y-1.5">
             <h3 className="font-serif text-lg font-semibold tracking-tight">{locale === 'bn' ? 'ফ্রি ডেলিভারি পাবেন' : 'Complimentary Shipping'}</h3>
             <p className="text-[10px] text-brand-muted font-medium">{locale === 'bn' ? '৳১৯৯৯+ মূল্যের সকল অর্ডারে' : 'On all orders above ৳1999'}</p>
           </div>
           <div className="pt-3">
-            <Link href={`/shop`} className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wide text-brand-primary hover:text-[#C6A15B] transition-colors">
+            <Link href={`/shop`} className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wide text-brand-primary hover:text-brand-primary-alt transition-colors">
               <span>{locale === 'bn' ? 'এখনই কিনুন' : 'Shop Now'}</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
@@ -229,7 +229,7 @@ export default function HomePageClient({ initialProducts }: { initialProducts: H
           <h2 className="font-serif text-base sm:text-lg font-semibold text-brand-text tracking-tight">
             {locale === 'bn' ? 'ফিচার্ড প্রোডাক্টস' : 'Featured Products'}
           </h2>
-          <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-secondary transition-colors uppercase tracking-wide">
+          <Link href={`/shop`} className="text-[11px] font-semibold text-brand-primary hover:text-brand-primary-alt transition-colors uppercase tracking-wide">
             {locale === 'bn' ? 'সব দেখুন' : 'View all'}
           </Link>
         </div>

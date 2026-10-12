@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     locale: 'bn_BD',
     type: 'website',
   },
+  icons: {
+    icon: [
+      { url: '/our_collection_icon.svg', type: 'image/svg+xml' },
+      { url: '/our_collection_icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/our_collection_icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
   twitter: {
     card: 'summary_large_image',
     title: `${STORE_NAME} — প্রিমিয়াম হোম ডেকোর`,

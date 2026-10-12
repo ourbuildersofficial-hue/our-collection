@@ -205,7 +205,7 @@ export default function ProductReviewsManager({
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs font-bold text-brand-text">{rev.customer_name}</span>
-                  <div className="flex text-[#C6A15B]">
+                  <div className="flex text-amber-400">
                     {[...Array(rev.rating)].map((_, i) => (
                       <Star key={i} className="h-3 w-3 fill-current" />
                     ))}

@@ -19,7 +19,7 @@ export default function ProductCard({ p, locale }: { p: HomeProduct; locale: str
   };
 
   return (
-    <div className="group bg-white rounded-2xl border border-brand-border [@media(hover:hover)]:hover:border-[#C6A15B]/50 overflow-hidden shadow-sm [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+    <div className="group bg-white rounded-2xl border border-brand-border [@media(hover:hover)]:hover:border-brand-primary/40 overflow-hidden shadow-sm [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
       {/* Product Image Wrapper */}
       <div className="relative aspect-square bg-brand-surface overflow-hidden">
         <Link href={`/product/${p.id}`} className="block h-full w-full">
@@ -34,7 +34,7 @@ export default function ProductCard({ p, locale }: { p: HomeProduct; locale: str
 
         {/* Discount Ribbon (Top-left corner) */}
         {p.discount && (
-          <span className="absolute top-2.5 left-2.5 bg-gradient-to-r from-brand-secondary to-brand-secondary-dark text-white text-[9px] font-bold px-2.5 py-1 rounded-full tracking-wide shadow-sm">
+          <span className="absolute top-2.5 left-2.5 bg-gradient-to-r from-brand-primary to-brand-primary-alt text-white text-[9px] font-bold px-2.5 py-1 rounded-full tracking-wide shadow-sm">
             {p.discount}
           </span>
         )}
@@ -42,16 +42,16 @@ export default function ProductCard({ p, locale }: { p: HomeProduct; locale: str
         {/* Wishlist Heart Icon (Top-right corner) */}
         <button
           onClick={() => toggleWishlist({ id: p.id, name_en: p.name_en, name_bn: p.name_bn, image: p.image, price: p.price, sale_price: p.sale_price })}
-          className="absolute top-2.5 right-2.5 h-8 w-8 flex items-center justify-center rounded-full bg-white/95 shadow-sm border border-brand-border [@media(hover:hover)]:hover:scale-110 [@media(hover:hover)]:hover:border-brand-secondary/50 [@media(hover:hover)]:hover:shadow-md transition-all duration-200"
+          className="absolute top-2.5 right-2.5 h-8 w-8 flex items-center justify-center rounded-full bg-white/95 shadow-sm border border-brand-border [@media(hover:hover)]:hover:scale-110 [@media(hover:hover)]:hover:border-brand-primary/50 [@media(hover:hover)]:hover:shadow-md transition-all duration-200"
         >
-          <Heart className={`h-3.5 w-3.5 transition-colors ${liked ? 'fill-brand-secondary text-brand-secondary' : 'text-brand-muted'}`} strokeWidth={1.75} />
+          <Heart className={`h-3.5 w-3.5 transition-colors ${liked ? 'fill-brand-primary text-brand-primary' : 'text-brand-muted'}`} strokeWidth={1.75} />
         </button>
 
         {/* Quick-add overlay (appears on hover) */}
         <button
           onClick={handleAddToCart}
           disabled={p.stock === 0}
-          className="absolute inset-x-0 bottom-0 translate-y-full [@media(hover:hover)]:group-hover:translate-y-0 bg-gradient-to-r from-brand-secondary to-brand-secondary-dark text-white text-[10px] font-bold uppercase tracking-widest py-2.5 flex items-center justify-center gap-1.5 transition-transform duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
+          className="absolute inset-x-0 bottom-0 translate-y-full [@media(hover:hover)]:group-hover:translate-y-0 bg-gradient-to-r from-brand-primary to-brand-primary-alt text-white text-[10px] font-bold uppercase tracking-widest py-2.5 flex items-center justify-center gap-1.5 transition-transform duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <ShoppingCart className="h-3.5 w-3.5" strokeWidth={1.75} />
           <span>{locale === 'bn' ? 'কার্টে যোগ করুন' : 'Add to Cart'}</span>
@@ -67,7 +67,7 @@ export default function ProductCard({ p, locale }: { p: HomeProduct; locale: str
 
           {/* Price + Stock */}
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-sm sm:text-base font-bold text-brand-secondary">৳{price}</span>
+            <span className="text-sm sm:text-base font-bold text-brand-primary">৳{price}</span>
             {p.sale_price && (
               <span className="text-[10px] text-brand-muted line-through">৳{p.price}</span>
             )}

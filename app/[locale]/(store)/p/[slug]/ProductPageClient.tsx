@@ -351,7 +351,7 @@ export default function ProductPageClient({ product, otherProducts, deliveryInsi
             <div className="flex items-center gap-2.5 pt-1 flex-wrap">
               {product.reviews > 0 && (
                 <>
-                  <div className="flex items-center text-[#C6A15B]">
+                  <div className="flex items-center text-amber-400">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 fill-current" strokeWidth={1.5} />
                     ))}
@@ -504,7 +504,7 @@ export default function ProductPageClient({ product, otherProducts, deliveryInsi
                 key={idx}
                 className={`flex items-center gap-3 p-3 ${idx < boxItems.length - 1 ? 'border-b border-brand-border' : ''}`}
               >
-                <BoxIcon className="h-7 w-7 text-[#C6A15B] flex-shrink-0" strokeWidth={1.6} />
+                <BoxIcon className="h-7 w-7 text-brand-primary flex-shrink-0" strokeWidth={1.6} />
                 <div className="flex-1 min-w-0">
                   <b className="text-sm font-extrabold text-brand-text block">{title}</b>
                   {subtitle && <span className="text-[11px] text-brand-muted font-semibold">{subtitle}</span>}
@@ -524,7 +524,7 @@ export default function ProductPageClient({ product, otherProducts, deliveryInsi
             <div className="flex items-center justify-center gap-2.5">
               <span className="text-4xl md:text-5xl font-black text-brand-text leading-none">{product.rating}</span>
               <div className="flex flex-col items-start gap-1">
-                <div className="flex items-center text-[#C6A15B]">
+                <div className="flex items-center text-amber-400">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-current" strokeWidth={1.5} />
                   ))}
@@ -572,7 +572,7 @@ export default function ProductPageClient({ product, otherProducts, deliveryInsi
                       </span>
                     </div>
                   </div>
-                  <div className="flex text-[#C6A15B]">
+                  <div className="flex text-amber-400">
                     {[...Array(rev.rating)].map((_, i) => (
                       <Star key={i} className="h-3 w-3 fill-current" strokeWidth={1.5} />
                     ))}

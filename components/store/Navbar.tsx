@@ -43,7 +43,7 @@ export default function Navbar() {
               <button
                 onClick={() => setMenuOpen(o => !o)}
                 aria-label="মেনু"
-                className="p-2 -ml-2 flex items-center justify-center text-brand-text hover:text-[#C6A15B] active:scale-95 focus:outline-none transition-colors duration-200"
+                className="p-2 -ml-2 flex items-center justify-center text-brand-text hover:text-brand-primary active:scale-95 focus:outline-none transition-colors duration-200"
               >
                 <span className="relative block h-4 w-6">
                   <span
@@ -62,29 +62,25 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Center: Brand Logo & Tagline (matches footer lockup) */}
-            <Link href="/" className="flex items-center gap-2.5 group select-none justify-self-center">
+            {/* Center: Brand Full Logo */}
+            <Link href="/" className="flex items-center group select-none justify-self-center py-0.5">
               <img
-                src="/our_collection_icon.png"
+                src="/our_collection_logo.svg"
                 alt="Our Collection"
-                className="h-9 w-9 object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-9 sm:h-10 w-auto max-w-[170px] sm:max-w-[210px] object-contain group-hover:scale-105 transition-transform duration-200"
               />
-              <div className="leading-none text-left">
-                <span className="block text-[19px] font-serif font-semibold tracking-tight text-brand-text">Our Collection</span>
-                <span className="block max-w-[68px] text-[6px] leading-[1.3] font-semibold tracking-[0.05em] uppercase text-[#C6A15B] mt-1">Focus On Quality</span>
-              </div>
             </Link>
 
             {/* Right: Wishlist Action */}
             <div className="flex items-center justify-end">
               <Link
                 href={`/wishlist`}
-                className="relative p-2 rounded-lg text-brand-muted hover:text-brand-secondary hover:bg-brand-surface transition-all duration-200"
+                className="relative p-2 rounded-lg text-brand-muted hover:text-brand-primary hover:bg-brand-surface transition-all duration-200"
                 title="উইশলিস্ট"
               >
                 <Heart className="h-5 w-5" strokeWidth={1.75} />
                 {wishlistCount > 0 && (
-                  <span className="absolute top-0.5 right-0.5 bg-brand-secondary text-white text-[8px] font-black h-3.5 w-3.5 rounded-full flex items-center justify-center">
+                  <span className="absolute top-0.5 right-0.5 bg-brand-primary text-white text-[8px] font-black h-3.5 w-3.5 rounded-full flex items-center justify-center">
                     {wishlistCount}
                   </span>
                 )}
@@ -98,7 +94,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="border-t border-brand-border bg-white px-4 py-4 space-y-4 shadow-lg absolute w-full left-0 z-30">
             {/* Search */}
-            <form onSubmit={handleSearch} className="flex items-center rounded-full bg-brand-surface border border-brand-border overflow-hidden focus-within:border-[#C6A15B] focus-within:ring-1 focus-within:ring-[#C6A15B]/40 transition-all duration-200">
+            <form onSubmit={handleSearch} className="flex items-center rounded-full bg-brand-surface border border-brand-border overflow-hidden focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary/40 transition-all duration-200">
               <div className="pl-4 text-brand-muted">
                 <Search className="h-4 w-4" strokeWidth={1.75} />
               </div>
@@ -128,7 +124,7 @@ export default function Navbar() {
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center gap-3 py-2.5 px-3.5 rounded-lg text-xs sm:text-sm font-semibold text-brand-text hover:bg-brand-surface hover:text-brand-primary transition-colors"
                   >
-                    <Icon className="h-4.5 w-4.5 text-[#C6A15B]" strokeWidth={1.75} />
+                    <Icon className="h-4.5 w-4.5 text-brand-primary" strokeWidth={1.75} />
                     <span>{locale === 'bn' ? cat.bn : cat.en}</span>
                   </Link>
                 );

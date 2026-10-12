@@ -66,9 +66,8 @@ export default function OrderInvoicePage({ params }: { params: { id: string } })
 
       <div className="flex justify-between items-start border-b-2 border-black pb-4 mb-6">
         <div className="flex items-start gap-3">
-          <img src="/our_collection_icon.png" alt={store.name} className="h-12 w-12 object-contain flex-shrink-0" />
+          <img src="/our_collection_logo.svg" alt={store.name} className="h-12 w-auto max-w-[200px] object-contain flex-shrink-0" />
           <div>
-            <h1 className="text-2xl font-black">{store.name}</h1>
             {store.address && <p className="text-xs mt-1">{store.address}</p>}
             {store.phone && <p className="text-xs">ফোন: {store.phone}</p>}
             {store.email && <p className="text-xs">ইমেইল: {store.email}</p>}

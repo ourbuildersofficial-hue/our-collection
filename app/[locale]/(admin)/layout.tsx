@@ -71,16 +71,12 @@ export default function AdminLayout({
         <div>
           {/* Header */}
           <div className="h-16 flex items-center px-6 border-b border-white/10">
-            <Link href={`/${currentLocale}`} className="flex items-center gap-2.5 group">
+            <Link href={`/${currentLocale}`} className="flex items-center group">
               <img
-                src="/our_collection_icon.png"
+                src="/our_collection_logo_white.svg"
                 alt="Our Collection"
-                className="h-8 w-8 object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-8 w-auto max-w-[170px] object-contain group-hover:scale-105 transition-transform duration-200"
               />
-              <div className="leading-none">
-                <span className="block text-[15px] font-serif font-semibold tracking-tight text-white">Our Collection</span>
-                <span className="block text-[7px] font-semibold tracking-[0.18em] uppercase text-brand-accent mt-0.5">অ্যাডমিন প্যানেল</span>
-              </div>
             </Link>
           </div>
 

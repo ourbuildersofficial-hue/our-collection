@@ -68,17 +68,17 @@ export default function ExitIntentPopup() {
             <X className="h-5 w-5" strokeWidth={1.75} />
           </button>
 
-          {/* Header Icon — gold ring badge */}
-          <div className="h-14 w-14 rounded-full border-2 border-[#C6A15B] flex items-center justify-center text-[#C6A15B]">
+          {/* Header Icon — brand ring badge */}
+          <div className="h-14 w-14 rounded-full border-2 border-brand-primary flex items-center justify-center text-brand-primary">
             <Gift className="h-6 w-6" strokeWidth={1.5} />
           </div>
 
           {/* Text Copy */}
           <div className="space-y-2.5">
-            <span className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.25em] text-[#C6A15B] uppercase">
-              <span className="h-px w-4 bg-[#C6A15B]" />
+            <span className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.25em] text-brand-primary uppercase">
+              <span className="h-px w-4 bg-brand-primary" />
               {locale === 'bn' ? 'বিশেষ অফার' : 'Special Offer'}
-              <span className="h-px w-4 bg-[#C6A15B]" />
+              <span className="h-px w-4 bg-brand-primary" />
             </span>
             <h2 className="font-serif text-xl md:text-2xl font-semibold text-brand-text leading-tight">
               {locale === 'bn' ? 'যাওয়ার আগে উপহার নিন!' : "Wait! Don't Leave Empty Handed"}
@@ -90,14 +90,14 @@ export default function ExitIntentPopup() {
             </p>
           </div>
 
-          {/* Coupon Code Block — ticket style with dashed gold border */}
-          <div className="w-full flex items-center justify-between border-2 border-dashed border-[#C6A15B]/50 bg-brand-surface rounded-xl py-3 px-5">
-            <span className="font-mono font-extrabold text-base tracking-wider text-brand-secondary">
+          {/* Coupon Code Block — ticket style with dashed brand border */}
+          <div className="w-full flex items-center justify-between border-2 border-dashed border-brand-primary/40 bg-brand-surface rounded-xl py-3 px-5">
+            <span className="font-mono font-extrabold text-base tracking-wider text-brand-primary">
               WELCOME10
             </span>
             <button
               onClick={handleCopyCode}
-              className="flex items-center gap-1 text-xs font-bold text-[#C6A15B] hover:text-brand-secondary transition-colors"
+              className="flex items-center gap-1 text-xs font-bold text-brand-primary hover:text-brand-primary-alt transition-colors"
             >
               {copied ? (
                 <>
@@ -116,7 +116,7 @@ export default function ExitIntentPopup() {
           {/* CTA */}
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full py-3.5 rounded-full bg-gradient-to-br from-brand-secondary to-brand-secondary-dark text-white font-bold text-xs uppercase tracking-widest hover:opacity-90 shadow-lg shadow-brand-secondary/20 transition-all-custom"
+            className="w-full py-3.5 rounded-full bg-gradient-to-br from-brand-primary to-brand-primary-alt text-white font-bold text-xs uppercase tracking-widest hover:opacity-95 shadow-lg shadow-brand-primary/25 transition-all-custom"
           >
             {locale === 'bn' ? 'অফারটি ব্যবহার করুন' : 'Claim My 10% Discount'}
           </button>

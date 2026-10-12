@@ -52,8 +52,8 @@ export default function ShopPageClient({ products }: { products: HomeProduct[] }
     <div className="space-y-6 px-4 sm:px-0 pb-16">
       {/* Header */}
       <div className="pt-2 pb-4 border-b border-brand-border space-y-1.5">
-        <span className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.25em] text-[#C6A15B] uppercase">
-          <span className="h-px w-4 bg-[#C6A15B]" />
+        <span className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.25em] text-brand-primary uppercase">
+          <span className="h-px w-4 bg-brand-primary" />
           {locale === 'bn' ? 'আওয়ার কালেকশন' : 'Our Collection'}
         </span>
         <h1 className="font-serif text-2xl md:text-4xl font-semibold tracking-tight text-brand-text leading-tight">
